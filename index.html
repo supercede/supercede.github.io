@@ -86,8 +86,9 @@
                 <h2 class="heading2">Skills</h2>
                 <ul class="my-1">
                   <li>
+                    <!-- <i class="fas fa-laptop-code"></i> -->
                     <span
-                      class="list_image icon_dnd"
+                      class="list_image fas fa-laptop-code"
                       aria-label="list image"
                       role="img"
                       >&nbsp;</span
@@ -98,24 +99,26 @@
                     </p>
                   </li>
                   <li>
-                    <!-- <span
-                      class="list_image icon_fsd"
+                    <!-- <i class="fas fa-terminal"></i> -->
+                    <span
+                      class="list_image fas fa-terminal"
                       aria-label="list image"
                       role="img"
                       >&nbsp;</span
-                    > -->
+                    >
                     <h3 class="description">Frameworks</h3>
                     <p>
                       NodeJS (Express and AdonisJS), NestJS, ReactJS
                     </p>
                   </li>
                   <li>
-                    <!-- <span
-                      class="list_image icon_cs"
+                    <!-- <i class="fas fa-terminal"></i> -->
+                    <span
+                      class="list_image fas fa-database"
                       aria-label="list image"
                       role="img"
                       >&nbsp;</span
-                    > -->
+                    >
                     <h3 class="description">Databases</h3>
                     <p>
                       PostgreSQL, MYSQL, MongoDB
@@ -135,6 +138,56 @@
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="contact">
+          <div class="contact__wrapper">
+            <!-- <div class="watermark watermark_contact">Contact</div> -->
+            <div class="watermark watermark_about">
+              &lt;div&gt; <br /><span> Contact</span> <br />&lt;/div&gt;
+            </div>
+            <div class="contact_wrapper">
+              <h2 class="heading2 anim_ideas">Got an idea?</h2>
+              <p class="lead my-1 anim_reachout">Or want to get in touch?</p>
+              <form name="contact" id="contactform" class="anim_form">
+                <div>
+                  <input
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Full Name*"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email Address*"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    id="number"
+                    name="number"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject"
+                  ></textarea>
+                </div>
+                <div class="success"></div>
+                <div>
+                  <input type="submit" id="send" name="send" value="Send" />
+                </div>
+              </form>
             </div>
           </div>
         </section>
