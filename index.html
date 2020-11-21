@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="author" content="Sijuade Ajagunna" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
       content="Sijuade Ajagunna, Software Developer, supercede"
@@ -16,7 +17,11 @@
     <link rel="icon" href="./favicon.png" type="image/png" />
     <!-- <link rel="manifest" href="manifest.json" /> -->
     <title>Supercede</title>
-    <link rel="icon" href="/favicon.png" />
+    <meta name="apple-mobile-web-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Supercede" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="manifest.json" />
     <link href="/main.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/1759022df8.js"
@@ -427,5 +432,15 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/typed.min.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('DOMContentLoaded', () => {
+          navigator.serviceWorker
+            .register('service-worker.js')
+            .then((reg) => console.log('Reg'))
+            .catch((err) => console.log('error', err));
+        });
+      }
+    </script>
   </body>
 </html>
