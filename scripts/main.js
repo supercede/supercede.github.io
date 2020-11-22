@@ -2,8 +2,9 @@ const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__burger');
 const sections = document.querySelectorAll('section');
 const menuNav = document.querySelector('nav .container ul');
-console.log(menuNav);
 const navItems = document.querySelectorAll('nav .container .nav-link');
+const body = document.querySelector('body');
+const loader = document.querySelector('.loader');
 
 let showMenu = false;
 
@@ -37,3 +38,26 @@ function toggleMenu() {
     }
   })
 );
+
+window.addEventListener('DOMContentLoaded', () => {
+  body.classList.remove('loading');
+  loader.style.display = 'none';
+
+  const strings = [
+    '',
+    'Software Developer',
+    'Technical Writer',
+    'Music Afficionado',
+    'Dad Joke Expert',
+    'Football Manager Fiend',
+  ];
+
+  var typed = new Typed('.text-slider', {
+    strings: strings,
+    typeSpeed: 50,
+    startDelay: 2000,
+    loop: true,
+    backDelay: 900,
+    backSpeed: 30,
+  });
+});

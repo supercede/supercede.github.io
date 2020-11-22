@@ -21,8 +21,34 @@
     <meta name="apple-mobile-web-app-title" content="Supercede" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
     <link rel="icon" href="/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./images/icons/apple-touch-icon.png"
+    />
     <link rel="manifest" href="manifest.json" />
+    <link
+      rel="preload"
+      as="style"
+      href="/main.css"
+      onload="this.rel = 'stylesheet'"
+      rel="stylesheet"
+    />
+    <!-- <noscript> -->
     <link href="/main.css" rel="stylesheet" />
+    <!-- </noscript> -->
+    <link
+      rel="preload"
+      href="fonts/UbuntuMono-Regular.ttf"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Calligraffitti-Regular.ttf"
+      as="font"
+      crossorigin="anonymous"
+    />
     <script
       src="https://kit.fontawesome.com/1759022df8.js"
       crossorigin="anonymous"
@@ -48,7 +74,12 @@
           <li class="nav-link"><a href="#about">About</a></li>
           <li class="nav-link"><a href="#projects">Projects</a></li>
           <li class="nav-link">
-            <a href="https://medium.com/@mahyor.sam" target="_blank">Blog</a>
+            <a
+              href="https://medium.com/@mahyor.sam"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Blog</a
+            >
           </li>
           <li class="nav-link">
             <a href="#contact"><button>Contact</button></a>
@@ -75,25 +106,29 @@
                   href="https://www.linkedin.com/in/sijuade-ajagunna-064458184/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><i class="fab fa-linkedin"></i
+                  aria-label="LinkedIn profile link"
+                  ><i class="fab fa-linkedin" aria-hidden="true"></i
                 ></a>
                 <a
                   href="https://github.com/supercede"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><i class="fab fa-github"></i
+                  aria-label="Github profile link"
+                  ><i class="fab fa-github" aria-hidden="true"></i
                 ></a>
                 <a
                   href="https://www.medium.com/@mahyor.sam"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><i class="fab fa-medium"></i
+                  aria-label="Medium profile link"
+                  ><i class="fab fa-medium" aria-hidden="true"></i
                 ></a>
                 <a
                   href="https://twitter.com/DEST1NY_"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><i class="fab fa-twitter"></i
+                  aria-label="Twitter profile link"
+                  ><i class="fab fa-twitter" aria-hidden="true"></i
                 ></a>
               </div>
             </div>
@@ -315,42 +350,53 @@
             <div class="contact_wrapper">
               <h2 class="heading2 anim_ideas">Got an idea?</h2>
               <p class="lead my-1 anim_reachout">Or want to get in touch?</p>
-              <form name="contact" id="contactform" class="anim_form">
+              <form
+                name="contact"
+                id="contactform"
+                class="anim_form"
+                action="https://formspree.io/f/mnqozedd"
+                method="POST"
+              >
                 <div>
-                  <input
-                    id="fullname"
-                    name="fullname"
-                    placeholder="Full Name*"
-                    required
-                  />
+                  <label for="fullname">
+                    <input
+                      id="fullname"
+                      name="fullname"
+                      placeholder="Full Name*"
+                      required
+                  /></label>
                 </div>
                 <div>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email Address*"
-                    required
-                  />
+                  <label for="email">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Email Address*"
+                      required
+                  /></label>
                 </div>
                 <div>
-                  <input
-                    type="tel"
-                    id="number"
-                    name="number"
-                    placeholder="Phone Number"
-                  />
+                  <label for="number">
+                    <input
+                      type="tel"
+                      id="number"
+                      name="number"
+                      placeholder="Phone Number"
+                  /></label>
                 </div>
                 <div>
-                  <textarea
-                    id="subject"
-                    name="subject"
-                    placeholder="Subject"
-                  ></textarea>
+                  <label for="subject">
+                    <textarea
+                      id="subject"
+                      name="subject"
+                      placeholder="Subject"
+                    ></textarea>
+                  </label>
                 </div>
                 <div class="success"></div>
                 <div>
-                  <input type="submit" id="send" name="send" value="Send" />
+                  <input type="submit" id="send" value="Send" />
                 </div>
               </form>
             </div>
@@ -365,25 +411,29 @@
               href="https://www.linkedin.com/in/sijuade-ajagunna-064458184/"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-linkedin"></i
+              aria-label="LinkedIn profile link"
+              ><i class="fab fa-linkedin" aria-hidden="true"></i
             ></a>
             <a
               href="https://github.com/supercede"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-github"></i
+              aria-label="Github profile link"
+              ><i class="fab fa-github" aria-hidden="true"></i
             ></a>
             <a
               href="https://www.medium.com/@mahyor.sam"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-medium"></i
+              aria-label="Medium profile link"
+              ><i class="fab fa-medium" aria-hidden="true"></i
             ></a>
             <a
               href="https://twitter.com/DEST1NY_"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-twitter"></i
+              aria-label="Twitter profile link"
+              ><i class="fab fa-twitter" aria-hidden="true"></i
             ></a>
           </div>
           <div></div>
@@ -395,38 +445,6 @@
         </div>
       </section>
     </div>
-    <script>
-      // document.addEventListener('DOMContentLoaded', () => {
-      window.addEventListener('DOMContentLoaded', () => {
-        const body = document.querySelector('body');
-        const loader = document.querySelector('.loader');
-
-        // setTimeout(() => {
-        body.classList.remove('loading');
-        loader.style.display = 'none';
-
-        const strings = [
-          '',
-          'Software Developer',
-          'Technical Writer',
-          'Music Afficionado',
-          'Dad Joke Expert',
-          'Football Manager Fiend',
-        ];
-        // if ($('.text-slider').length == 1) {
-        // var typed_strings = $('.text-slider-items').text();
-        var typed = new Typed('.text-slider', {
-          strings: strings,
-          typeSpeed: 50,
-          startDelay: 2000,
-          loop: true,
-          backDelay: 900,
-          backSpeed: 30,
-        });
-        // }, 500);
-        // }
-      });
-    </script>
     <script src="scripts/vendor.js"></script>
     <script src="scripts/greensock.js"></script>
     <script src="scripts/app.js"></script>

@@ -1,24 +1,30 @@
-const CACHE_NAME = 'supercede-current-v15';
-const DATA_CACHE_NAME = 'supercede-data-cache-v15';
+const CACHE_NAME = 'supercede-current-v17';
+const DATA_CACHE_NAME = 'supercede-data-cache-v17';
 
 console.log('jdjh');
 
 const FILES_TO_CACHE = [
   'index.html',
   'main.css',
-  'fonts/Calligraffitti-Regular.ttf',
-  'fonts/UbuntuMono-Bold.ttf',
-  'fonts/UbuntuMono-BoldItalic.ttf',
-  'fonts/UbuntuMono-Regular.ttf',
+  // 'fonts/Calligraffitti-Regular.ttf',
+  // 'fonts/UbuntuMono-Bold.ttf',
+  // 'fonts/UbuntuMono-BoldItalic.ttf',
+  // 'fonts/UbuntuMono-Regular.ttf',
   'manifest.json',
   'images/naijafotos.png',
   'images/naijatours.png',
   'images/times.png',
+  'images/icons/favicon-16x16.png',
+  'images/icons/favicon-32x32.png',
+  'images/icons/android-chrome-192x192.png',
+  'images/icons/android-chrome-512x512.png',
+  'images/icons/apple-touch-icon.png',
   'scripts/app.js',
   'scripts/main.js',
   'scripts/typed.min.js',
   'scripts/greensock.js',
   'scripts/vendor.js',
+  'favicon.ico',
 ];
 
 self.addEventListener('install', (evt) => {
